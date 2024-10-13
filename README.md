@@ -50,6 +50,25 @@ Usando a base de treinamento, o fine-tuning levou aproximadamente 4,5 hora para 
 
 Você deve entrar no Google AI Studio e selecionar [New Tuned Model](https://aistudio.google.com/fine-tuning) no menu lateral esquerdo. Em Select data for tuning, carregue o [arquivo xlsx de treinamento](./arquivos/qa.xlsx) selecionando `Importar > Upload`. Após o arquivo ser carregado, você precisará selecionar quais colunas do arquivo contém as perguntas e respostas para treinamento, conforme a imagem abaixo:
 
-![Seleção de colunas](./img/gemini-fine-tuning-01.jpj)
+![gemini-fine-tuning-01](https://github.com/user-attachments/assets/5bb56520-a871-4c47-b021-a46aa307c912)
+
+Marque a opção `Use first row as header` e clique em `Importar`.
+Após a importação do treinamento, defina os demais parâmetros de configuração:
+
+- Tuned model name: nome do modelo treinado.
+- Choose base model: selecione o modelo base para o treinamento (gemini-1.5-flash-tuning foi o usado neste trabalho).
+- Em Advanced settings, você pode alterar os parâmetros de configuração do treinamento, similar ao que foi feito para o gpt-4o-mini, mas é possível deixar com os valores padrão. Clique em `Tune` para iniciar o treinamento.
+
+Um dos testes de fine-tuning realizados com o Gemini 1.5 Flash utilizou os seguintes parâmetros:
+
+- Choose base model: `gemini-1.5-flash-tuning`
+- Batch size: 8
+- Learning rate multiplier: 0.0002 
+- Number of epochs: 4
+
+Saiba mais sobre o fine-tuning no Gemini [aqui](https://ai.google.dev/gemini-api/docs/model-tuning/).
+
+ 
+## Treinando o Llama 3.1
 
 
