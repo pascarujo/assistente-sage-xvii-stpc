@@ -106,3 +106,18 @@ Por questão de espaço, apenas alguns exemplos de conversação com o assistent
 - [Exemplo 10 - Explicação lúdica](./exemplos/exemplo_10_lúdico.md)
 - [Exemplo 11 - Conhecimento especialista](./exemplos/exemplo_11_conhecimento_especialista.md)
 - [Exemplo 12 - Rede de difusão confiável](./exemplos/exemplo_12_difusao_confiavel.md)
+
+## 📖 Referências
+
+- [Attention is all you need](https://arxiv.org/abs/1706.03762)
+- [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165)
+- [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903)
+- [Parameter-Efficient Transfer Learning for NLP](https://arxiv.org/abs/1902.00751)
+- [LoRA: Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2106.09685v1)
+- [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/abs/2005.11401)
+- [A Survey on Knowledge Graphs: Representation, Acquisition, and Applications](https://arxiv.org/abs/2002.00388v2)
+- [From Local to Global: A Graph RAG Approach to Query-Focused Summarization](https://arxiv.org/abs/2404.16130)
+- [A modular graph-based Retrieval-Augmented Generation (RAG) system](https://github.com/microsoft/graphrag)
+- [On the Opportunities and Risks of Foundation Models](https://arxiv.org/abs/2108.07258)
+
+
