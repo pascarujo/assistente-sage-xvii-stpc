@@ -2,7 +2,7 @@
 Repositório com links e material suplementar do trabalho apresentado no XVII STPC. O artigo está disponível para download no seguinte link: [Artigo STPC](./arquivos/XVII_STPC_IT_Assistente_Sage.pdf).
 
 
- ## Protótipo SageLM
+ ## 🚀 Protótipo SageLM
 
  Uma implementação experimental do assistente, batizada de SageLM, está disponível no seguinte link: [SageLM](https://sagelm.onrender.com).
 
@@ -10,21 +10,21 @@ O assistente foi desenvolvido em python utilizando a biblioteca streamlit e a AP
 
 Um tutorial de como utilizar o SageLM está disponível no seguinte link: [Tutorial SageLM](./arquivos/Tutorial_SageLM.pdf).
 
-## Avaliação dos especialistas
+## 🔎 Avaliação dos especialistas
 
 A pesquisa com especialistas em Sage foi realizada com 13 profissionais. Cada um avaliou pares de perguntas e respectivas respostas geradas pelo Gemini 1.5 Pro. Os especialistas foram instruídos a avaliar a qualidade das respostas do Gemini em termos de corretude, clareza e relevância, dando uma nota de 1 a 10 para cada uma. Para o caso de respostas que não atendiam aos critérios estabelecidos, os especialistas foram instruídos a fazer comentários para complementar ou indicar quais seriam as respostas corretas.
 
 As respostas coletadas estão disponíveis em [arquivos/pesquisa.xlsx](./arquivos/pesquisa.xlsx).
 
 
-## Dados de treinamento
+## 📚 Dados de treinamento
 
 Os pares de perguntas e respostas avaliados pelos especialistas foram amostrados da base completa de 1740 perguntas e respostas geradas com o Gemini 1.5 Pro cobrindo assuntos relacionados à configuração de base fonte SCADA do SAGE, incluindo configurações específicas para IEC 61850, ICCP e DNP. Esta base sofreu ajustes após a avaliação dos especialistas e está disponível como um lista json em [arquivos/qa.json](./arquivos/qa.json).
 
 O conjunto de perguntas e respostas também está disponível em formato de treinamento para o GPT no Hugging Face em [pascarujo/sage-qa-training/](https://huggingface.co/datasets/pascarujo/sage-qa-training).
 
 
-## Como treinar o gpt-4o
+## 🧠 Treinando o gpt-4o
 
 Você deve logar na área de API da OpenAI e selecionar [Fine-Tuning](https://platform.openai.com/finetune/) no Dashboard. Clique em Create no canto superior direito e selecione o modelo gpt-4o-mini ou outro do seu interesse. Carregue o [arquivo de treinamento](https://huggingface.co/datasets/pascarujo/sage-qa-training), escolha um identificador para o fine-tuning em `Suffix` e selecione as opções de configuração para criar o fine-tuning:
 
@@ -46,7 +46,7 @@ Um dos testes de fine-tuning realizados com o gpt-4o-mini utilizou os seguintes 
 
 Usando a base de treinamento, o fine-tuning levou aproximadamente 4,5 hora para ser concluído, treinando um total de `1.542.188` tokens. Observe que existe um custo para treinamento de modelos, você pode ter mais detalhes [aqui](https://openai.com/api/pricing/).
 
-## Como treinar o Gemini
+## 🧠 Treinando o Gemini
 
 Você deve entrar no Google AI Studio e selecionar [New Tuned Model](https://aistudio.google.com/fine-tuning) no menu lateral esquerdo. Em Select data for tuning, carregue o [arquivo xlsx de treinamento](./arquivos/qa.xlsx) selecionando `Importar > Upload`. Após o arquivo ser carregado, você precisará selecionar quais colunas do arquivo contém as perguntas e respostas para treinamento, conforme a imagem abaixo:
 
@@ -69,14 +69,16 @@ Um dos testes de fine-tuning realizados com o Gemini 1.5 Flash utilizou os segui
 Saiba mais sobre o fine-tuning no Gemini [aqui](https://ai.google.dev/gemini-api/docs/model-tuning/).
 
  
-## Treinando o Llama 3.1 8B
+## 🐑 Treinando o Llama 3.1 8B
 
 O modelo Llama 3.1 8B é um modelo open source da Meta baseado em LlamA 3.1, mas com apenas 8 bilhões de parâmetros. Ele pode ser treinado utilizando diversas plataformas e métodos, mas neste trabalho foi usado a biblioteca [Unsloth](https://github.com/unslothai/unsloth).
 
 O notebook usado para o treinamento está em [notebooks/sage_llama.ipynb](https://github.com/pascarujo/assistente-sage-xvii-stpc/blob/main/notebooks/sage_llama.ipynb)
 
+O modelo treinado está disponível no Hugging Face em [pascarujo/SageLlama-3.1-8B-GGUF](https://huggingface.co/pascarujo/SageLlama-3.1-8B-GGUF).
 
-## Assistente utilizando o Gemini
+
+## ⭐ Assistente utilizando o Gemini
 
 Um código de teste para utilizar o Gemini 1.5 Flash como um assistente de configuração do Sage está disponível em [notebooks/assistente_gemini.ipynb](https://github.com/pascarujo/assistente-sage-xvii-stpc/blob/main/notebooks/assistente_gemini.ipynb).
 
@@ -88,7 +90,7 @@ Para utilizar o código, é necessário:
 
 Observe que esta é uma versão simplificada do assistente. 
 
-## Exemplos de uso do assistente
+## 📧 Exemplos de uso do assistente
 
 Por questão de espaço, apenas alguns exemplos de conversação com o assistente foram inseridos no artigo. No diretório exemplos está o resultado de diversos testes de interação com o protótipo:
 
