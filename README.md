@@ -69,6 +69,38 @@ Um dos testes de fine-tuning realizados com o Gemini 1.5 Flash utilizou os segui
 Saiba mais sobre o fine-tuning no Gemini [aqui](https://ai.google.dev/gemini-api/docs/model-tuning/).
 
  
-## Treinando o Llama 3.1
+## Treinando o Llama 3.1 8B
+
+O modelo Llama 3.1 8B é um modelo open source da Meta baseado em LlamA 3.1, mas com apenas 8 bilhões de parâmetros. Ele pode ser treinado utilizando diversas plataformas e métodos, mas neste trabalho foi usado a biblioteca [Unsloth](https://github.com/unslothai/unsloth).
+
+O notebook usado para o treinamento está em [notebooks/sage_llama.ipynb](https://github.com/pascarujo/assistente-sage-xvii-stpc/blob/main/notebooks/sage_llama.ipynb)
 
 
+## Assistente utilizando o Gemini
+
+Um código de teste para utilizar o Gemini 1.5 Flash como um assistente de configuração do Sage está disponível em [notebooks/assistente_gemini.ipynb](https://github.com/pascarujo/assistente-sage-xvii-stpc/blob/main/notebooks/assistente_gemini.ipynb).
+
+Para utilizar o código, é necessário:
+
+- [Gerar uma chave de API do Gemini](https://aistudio.google.com/app/apikey).
+- Definir os arquivos que serão utilizados como base de conhecimento para in-context learning. Por padrão, os arquivos devem ficar na pasta dados. Como teste, você pode usar os exemplos de perguntas e respostas disponíveis em [arquivos/qa.xlsx](./arquivos/qa.xlsx).
+- Definir o prompt de instrução que será utilizado para o modelo. Um exemplo simples está disponível no notebook.
+
+Observe que esta é uma versão simplificada do assistente. 
+
+## Exemplos de uso do assistente
+
+Por questão de espaço, apenas alguns exemplos de conversação com o assistente foram inseridos no artigo. No diretório exemplos está o resultado de diversos testes de interação com o protótipo:
+
+- [Exemplo 01 - Erro de digitação no ID do CGS](./exemplos/exemplo_01_erro_digitação.md)
+- [Exemplo 02 - Ajuda na configuração do OPMSK](./exemplos/exemplo_02_opmsk.md)
+- [Exemplo 03 - Ajuda para clonar uma base](./exemplos/exemplo_03_duplicação_de_pontos.md)
+- [Exemplo 04 - Tirando dúvidas de um iniciante](./exemplos/exemplo_04_iniciante.md)
+- [Exemplo 05 - Descrevendo tabelas](./exemplos/exemplo_05_descrição_tabelas.md)
+- [Exemplo 06 - Criando um diagrama](./exemplos/exemplo_06_criar_diagrama.md)
+- [Exemplo 07 - Resposta a pergunta da base de treinamento](./exemplos/exemplo_07_melhora_na_resposta.md)
+- [Exemplo 08 - Visão geral do Sage](./exemplos/exemplo_08_visao_geral.md)
+- [Exemplo 09 - Teste de alinhamento](./exemplos/exemplo_09_alinhamento.md)
+- [Exemplo 10 - Explicação lúdica](./exemplos/exemplo_10_lúdico.md)
+- [Exemplo 11 - Conhecimento especialista](./exemplos/exemplo_11_conhecimento_especialista.md)
+- [Exemplo 12 - Rede de difusão confiável](./exemplos/exemplo_12_difusao_confiavel.md)
